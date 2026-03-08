@@ -1465,7 +1465,26 @@
             });
         });
 
-        function openModal() { document.getElementById('modal').classList.add('o'); document.body.style.overflow = 'hidden' }
+        function openModal() {
+    const modal = document.getElementById('modal');
+    const video = modal.querySelector('video');
+
+    modal.classList.add('o');
+    document.body.style.overflow = 'hidden';
+
+    video.currentTime = 0; // start from beginning
+    video.play(); // autoplay
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    const video = modal.querySelector('video');
+
+    modal.classList.remove('o');
+    document.body.style.overflow = '';
+
+    video.pause(); // stop when closing
+}
         function closeModal() { document.getElementById('modal').classList.remove('o'); document.body.style.overflow = '' }
         document.getElementById('modal').addEventListener('click', function (e) { if (e.target === this) closeModal() });
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal() });
