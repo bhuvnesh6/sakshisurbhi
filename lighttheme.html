@@ -115,7 +115,10 @@
         .nlinks { display:flex; gap:30px; align-items:center }
         .nlinks a {
             font-size:.74rem; letter-spacing:.1em; text-transform:uppercase;
-            color:var(--mist); transition:color .3s; font-weight:500
+            color:var(--bg); transition:color .3s; font-weight:500;
+            padding: 5px;
+            border-radius: 6px;
+            background-color: #00000093;
         }
         .nlinks a:hover { color:var(--gold) }
         .ncta {
@@ -156,13 +159,13 @@
         }
         .hbg2 {
             position:absolute; inset:0; z-index:0;
-            background:url('https://raw.githubusercontent.com/bhuvnesh6/sakshisurbhi/refs/heads/main/img/heroimgsurbhi.avif') center/cover no-repeat
+            background:url('/img/hero.png') center/cover no-repeat
         }
         .hbg2::after {
             content:''; position:absolute; inset:0;
             background:linear-gradient(to top,
-                rgba(250,249,246,.97) 0%,
-                rgba(250,249,246,.48) 46%,
+                rgba(13, 13, 13, 0.876) 0%,
+                rgba(3, 3, 3, 0.48) 46%,
                 rgba(250,249,246,.08) 100%)
         }
         .hvb {
@@ -207,12 +210,12 @@
         }
         .htitle em { font-style:italic; color:var(--gold) }
         .hsub {
-            font-size:clamp(1rem,2.2vw,1.35rem); color:var(--mist);
+            font-size:clamp(1rem,2.2vw,1.35rem); color:rgb(252, 252, 252);
             font-weight:400; margin-bottom:38px; letter-spacing:.03em
         }
         .hmeta { display:flex; gap:44px; flex-wrap:wrap; margin-bottom:44px }
-        .hmeta .v { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:var(--ink) }
-        .hmeta .l { font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-top:4px }
+        .hmeta .v { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:600; color:rgb(226, 226, 226); }
+        .hmeta .l { font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--bg3); margin-top:4px ;}
         .ha { display:flex; gap:14px; flex-wrap:wrap }
         .bp {
             background:var(--gold); color:#fff;
@@ -227,8 +230,8 @@
         }
         .bo {
             background:transparent;
-            border:1.5px solid rgba(45,49,66,.2);
-            color:var(--ink); padding:15px 36px;
+            border:1.5px solid rgba(255, 255, 255, 0.913);
+            color:var(--bg); padding:15px 36px;
             font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
             cursor:pointer; font-family:'DM Sans',sans-serif;
             transition:all .3s; font-weight:500
@@ -350,7 +353,7 @@
             justify-content:center; flex-direction:column; gap:12px;
             overflow:hidden; position:relative
         }
-        .lmp img { position:absolute; inset:0; opacity:.5; width:100%; height:100%; object-fit:cover }
+        .lmp img { position:absolute; inset:0; opacity:0.8; width:100%; height:100%; object-fit:cover }
         .mo {
             position:relative; z-index:2; text-align:center;
             background:rgba(250,249,246,.85); padding:14px 22px; backdrop-filter:blur(4px)
@@ -786,9 +789,7 @@
     <!-- HERO -->
     <section id="hero">
         <div class="hbg2"><!-- REPLACE: background-image with your hero exterior photo --></div>
-        <button class="hvb" onclick="openModal()"><svg viewBox="0 0 24 24">
-                <polygon points="5,3 19,12 5,21" />
-            </svg></button>
+        
         <div class="hc">
             <div class="hbadge reveal"><span class="dot"></span><span>Now Selling · Dwarka Expressway</span></div>
             <h1 class="htitle reveal d1">Surbhi<br /><em>Sakshi</em></h1>
@@ -885,17 +886,7 @@
     </section>
 
     <!-- VIDEO -->
-    <section id="vs">
-        <div class="vbg"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1800" alt="Aerial" />
-        </div><!-- REPLACE: img-3 aerial -->
-        <div class="vc">
-            <div class="gold-line reveal" style="justify-content:center"><span>Experience the Project</span></div>
-            <h2 class="reveal d1">See Your Future Home<br />Come to Life</h2>
-            <div class="pb reveal d2" onclick="openModal()"><svg viewBox="0 0 24 24">
-                    <polygon points="5,3 19,12 5,21" />
-                </svg></div>
-        </div>
-    </section>
+    
 
     <!-- LOCATION -->
     <section id="location">
@@ -907,7 +898,7 @@
             <div class="lg">
                 <div>
                     <div class="lmp rs">
-                        <img src="img/DwarkaExpresswayNewDelhi.jpg"
+                        <img src="img/highway.png"
                             alt="Location" /><!-- REPLACE: map/location image -->
                         <div class="mo">
                             <div style="font-size:2rem;margin-bottom:6px">📍</div><span>Dwarka Expressway · New
