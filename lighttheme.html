@@ -455,7 +455,20 @@
             padding:32px; height:420px; display:flex; align-items:center;
             justify-content:center; overflow:hidden; box-shadow:0 4px 24px var(--shadow)
         }
-        .fpimg img { object-fit:contain }
+
+
+        .fpvideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or 'contain' if it's floor plan */
+    filter: sepia(0.2) brightness(0.95) contrast(1.05);
+    transition: transform 0.6s ease;
+}
+
+/* subtle hover effect (premium feel) */
+.fpimg:hover .fpvideo {
+    transform: scale(1.05);
+}
         .fpd h3 { font-family:'Cormorant Garamond',serif; font-size:2.6rem; font-weight:300; margin-bottom:8px; color:var(--ink) }
         .fpd .fpp { font-size:.8rem; color:var(--gold); letter-spacing:.1em; margin-bottom:28px; font-weight:600 }
         .fptbl { width:100%; border-collapse:collapse; margin-bottom:28px }
@@ -847,9 +860,9 @@
     <section id="overview">
         <div class="og">
             <div class="ois rl">
-                <div class="im"><img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=900"
+                <div class="im"><img src="img\ChatGPT Image Mar 19, 2026, 11_19_15 AM.png"
                         alt="Exterior" /></div><!-- REPLACE: img-1 -->
-                <div class="ia"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600"
+                <div class="ia"><img src="img\a1b892a3-ae85-4265-86e1-a162322bab2d.jpg"
                         alt="Interior" /></div><!-- REPLACE: img-2 -->
                 <div class="ist">
                     <div class="num">15+</div>
@@ -985,28 +998,28 @@
             </div>
             <div class="gg">
                 <!-- REPLACE each image src with your actual project photos -->
-                <div class="gitem g1 rs"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900"
+                <div class="gitem g1 rs"><img src="img\a1b892a3-ae85-4265-86e1-a162322bab2d.jpg"
                         alt="Living Room" /></div><!-- img-4 -->
                 <div class="gitem g2 reveal d1"><img
-                        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700" alt="Kitchen" /></div>
+                        src="img\0b0a6f5b-d01c-4f14-a17e-b3f73efeb1ed.jpg" alt="Kitchen" /></div>
                 <!-- img-5 -->
                 <div class="gitem g3 reveal d2"><img
-                        src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=700" alt="Bedroom" /></div>
+                        src="img\bedroom.png" alt="Bedroom" /></div>
                 <!-- img-6 -->
                 <div class="gitem g4 reveal d1"><img
-                        src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=700" alt="Bathroom" /></div>
+                        src="img\be843a79-77cf-4c87-a3fa-fdde7630b003.jpg" alt="Bathroom" /></div>
                 <!-- img-7 -->
                 <div class="gitem g5 reveal d2"><img
-                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700" alt="Terrace" /></div>
+                        src="img\Gemini_Generated_Image_ze48mzze48mzze48.png" alt="Terrace" /></div>
                 <!-- img-8 -->
                 <div class="gitem g6 reveal d3"><img
-                        src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=700" alt="Exterior" /></div>
+                        src="img\hero.png" alt="Exterior" /></div>
                 <!-- img-9 -->
                 <div class="gitem g7 reveal d1"><img
-                        src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900" alt="Common Area" />
+                        src="img\a1b892a3-ae85-4265-86e1-a162322bab2d.jpg" alt="Common Area" />
                 </div><!-- img-10 -->
                 <div class="gitem g8 reveal d2"><img
-                        src="https://images.unsplash.com/photo-1600573472556-e636c2acda88?w=900" alt="Balcony" /></div>
+                        src="img\Gemini_Generated_Image_6glifz6glifz6gli.png" alt="Balcony" /></div>
                 <!-- img-11 -->
             </div>
             <div class="gcta reveal">
@@ -1124,7 +1137,7 @@
                     <div class="sr reveal d4"><span class="sn">Countertop</span><span class="sv">Premium Stone
                             Surface</span></div>
                 </div>
-                <div class="iimg rr"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+                <div class="iimg rr"><img src="img\04a6b89c-b461-4019-b03c-df6cea0e5af0.jpg"
                         alt="Kitchen" /></div><!-- REPLACE: img-12 kitchen -->
             </div>
             <div class="ipanel" id="p-bath">
@@ -1138,7 +1151,7 @@
                     <div class="sr reveal d3"><span class="sn">Sanitary Ware</span><span class="sv">Branded Premium
                             Fixtures</span></div>
                 </div>
-                <div class="iimg rr"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800"
+                <div class="iimg rr"><img src="img\be843a79-77cf-4c87-a3fa-fdde7630b003.jpg"
                         alt="Bathroom" /></div><!-- REPLACE: img-13 bathroom -->
             </div>
             <div class="ipanel" id="p-living">
@@ -1150,7 +1163,7 @@
                     <div class="sr reveal d2"><span class="sn">Layout</span><span class="sv">Open Spacious Design</span>
                     </div>
                 </div>
-                <div class="iimg rr"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800"
+                <div class="iimg rr"><img src="img\a1b892a3-ae85-4265-86e1-a162322bab2d.jpg"
                         alt="Living Room" /></div><!-- REPLACE: img-14 living -->
             </div>
             <div class="ipanel" id="p-bed">
@@ -1162,7 +1175,7 @@
                     <div class="sr reveal d2"><span class="sn">Ventilation</span><span class="sv">Natural Air Flow
                             Design</span></div>
                 </div>
-                <div class="iimg rr"><img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800"
+                <div class="iimg rr"><img src="img\bedroom.png"
                         alt="Bedroom" /></div><!-- REPLACE: img-15 bedroom -->
             </div>
             <div class="ipanel" id="p-terrace">
@@ -1174,7 +1187,7 @@
                     <div class="sr reveal d2"><span class="sn">Garden</span><span class="sv">Terrace Garden
                             Design</span></div>
                 </div>
-                <div class="iimg rr"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
+                <div class="iimg rr"><img src="img\Gemini_Generated_Image_ze48mzze48mzze48.png"
                         alt="Terrace" /></div><!-- REPLACE: img-16 terrace -->
             </div>
         </div>
@@ -1191,8 +1204,14 @@
                 <div class="fptab" data-fp="4b">4 BHK</div>
             </div>
             <div class="fpc a" id="fp-2b">
-                <div class="fpimg rl"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
-                        alt="2BHK Plan" style="object-fit:contain;filter:sepia(.25) opacity(.85)" /></div>
+                <div class="fpimg rl">
+                  
+                    <video autoplay muted loop playsinline class="fpvideo">
+        <source src="img\Camera_entering_flat_202603191041.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+                </div>
                 <!-- REPLACE: 2BHK floor plan -->
                 <div class="fpd rr">
                     <div class="gold-line"><span>2 BHK Configuration</span></div>
@@ -1229,8 +1248,12 @@
                 </div>
             </div>
             <div class="fpc" id="fp-3b">
-                <div class="fpimg rl"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
-                        alt="3BHK Plan" style="object-fit:contain;filter:sepia(.25) opacity(.85)" /></div>
+                <div class="fpimg rl">
+                               <video autoplay muted loop playsinline class="fpvideo">
+        <source src="img\Camera_entering_flat_202603191041.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+                </div>
                 <!-- REPLACE: 3BHK floor plan -->
                 <div class="fpd rr">
                     <div class="gold-line"><span>3 BHK Configuration</span></div>
@@ -1267,8 +1290,12 @@
                 </div>
             </div>
             <div class="fpc" id="fp-4b">
-                <div class="fpimg rl"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
-                        alt="4BHK Plan" style="object-fit:contain;filter:sepia(.25) opacity(.85)" /></div>
+                <div class="fpimg rl">
+                               <video autoplay muted loop playsinline class="fpvideo">
+        <source src="img\Camera_entering_flat_202603191041.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+                </div>
                 <!-- REPLACE: 4BHK floor plan -->
                 <div class="fpd rr">
                     <div class="gold-line"><span>4 BHK Configuration</span></div>
